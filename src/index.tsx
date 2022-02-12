@@ -5,10 +5,13 @@ import App from './App';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {ProductProvider} from './context/ProductContext';
+import { CartProvider } from './context/CartContext';
 
 ReactDOM.render(
   <ProductProvider>
-    <App />
+    <CartProvider>
+      <App />
+    </CartProvider>
   </ProductProvider>,
   document.getElementById('root')
 );
